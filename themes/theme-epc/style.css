@@ -977,9 +977,21 @@ body::after {
   clip-path: polygon(0% 0%, 0% 100%, 4% 100%, 4% 0, 96% 0, 96% 70%, 96% 90%, 96% 100%, 100% 100%, 100% 0%);
 }
 
+@media (max-width: 1000px) {
+  body::after {
+    clip-path: polygon(0 100%, 0 100%, 100% 100%, 0% 100%);
+  }
+}
+
 #masthead {
   background-color: #0d1631;
   width: 96%;
+}
+
+@media (max-width: 1000px) {
+  #masthead {
+    width: 100%;
+  }
 }
 
 #masthead p, #masthead ul {
@@ -1017,12 +1029,19 @@ body::after {
   height: 700px;
   display: grid;
   width: 85%;
-  min-width: 1000px;
+  min-width: 1150px;
   margin: auto;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 40px 40px;
   grid-template-areas: ". ." ". .";
+}
+
+@media (max-width: 1000px) {
+  .entry-content {
+    gap: 0%;
+    min-width: 40px;
+  }
 }
 
 .entry-footer {
@@ -1037,6 +1056,13 @@ footer {
   padding-top: 1.5rem;
 }
 
+@media (max-width: 1000px) {
+  footer {
+    margin-top: 10%;
+    width: 100%;
+  }
+}
+
 .site-info {
   color: #fff;
 }
@@ -1048,6 +1074,12 @@ footer {
   font-size: 1.6rem;
   padding-left: 15%;
   padding-right: 15%;
+}
+
+@media (max-width: 1000px) {
+  .entry-content p {
+    font-size: 1.3rem;
+  }
 }
 
 .entry-title {

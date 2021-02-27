@@ -16,4 +16,10 @@
 	}
 }
 
+@mixin phone {
+	@media (max-width: 780px) {
+		@content;
+	}
+}
+
 

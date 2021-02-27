@@ -18,12 +18,19 @@ body::after {
 
     background-color: #26408b;
     clip-path: polygon(0% 0%, 0% 100%, 4% 100%, 4% 0, 96% 0, 96% 70%, 96% 90%, 96% 100%, 100% 100%, 100% 0%);
+
+    @include tablet {
+        clip-path: polygon(0 100%, 0 100%, 100% 100%, 0% 100%);
+    }
 }
 
 #masthead {
     background-color: #0d1631;
     width: 96%;
     
+    @include tablet {
+        width: 100%;
+    }
 
     p, ul {
         margin-top: 0;
@@ -62,7 +69,7 @@ body::after {
     height: 700px;
     display: grid;
     width: 85%;
-    min-width: 1000px;
+    min-width: 1150px;
     margin: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -70,6 +77,15 @@ body::after {
     grid-template-areas:
     ". ."
     ". .";
+
+    @include tablet {
+        gap: 0%;
+        min-width: 40px;
+
+        .wp-block-image {
+            //width: 40%;
+        }
+    }
 }
 
 .entry-footer {
@@ -82,6 +98,11 @@ footer {
     height: 4.8rem;
     text-align: center;
     padding-top: 1.5rem;
+
+    @include tablet {
+        margin-top: 10%;
+        width: 100%;
+    }
 }
 
 .site-info {
@@ -95,6 +116,11 @@ footer {
     font-size: 1.6rem;
     padding-left: 15%;
     padding-right: 15%;
+
+    @include tablet {
+        font-size: 1.3rem;
+    }
+
 }
 
 .entry-title {
