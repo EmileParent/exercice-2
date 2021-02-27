@@ -2,13 +2,13 @@ a {
 	color: $color__link;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color_site-title;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color_site-title;
 	}
 
 	&:focus {
@@ -18,5 +18,9 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+
+	.site-title a, .site-title a:hover, .site-title a:focus, .site-title a:active{
+		color: $color_site-title;
 	}
 }
