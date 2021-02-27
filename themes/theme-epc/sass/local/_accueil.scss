@@ -59,6 +59,16 @@ body::after {
         box-sizing: border-box;
         border-radius: 30px;
     }
+
+    @include phone {
+        .wp-image-8 {
+            grid-row: 1/2;
+        }
+
+        .wp-image-9 {
+            grid-row: 3/4;
+        }
+    }
 }
 
     .wp-block-image:hover {
@@ -74,9 +84,6 @@ body::after {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 40px 40px;
-    grid-template-areas:
-    ". ."
-    ". .";
 
     @include tablet {
         gap: 0%;
@@ -86,6 +93,12 @@ body::after {
             //width: 40%;
         }
     }
+
+    @include phone {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
 }
 
 .entry-footer {
@@ -121,6 +134,18 @@ footer {
         font-size: 1.3rem;
     }
 
+}
+
+.entry-content p:nth-child(3) {
+    @include phone {
+        grid-row: 2/3;
+    }
+}
+
+.entry-content p:nth-child(4) {
+    @include phone {
+        grid-row: 4/5;
+    }
 }
 
 .entry-title {
