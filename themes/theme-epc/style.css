@@ -1081,6 +1081,12 @@ footer {
   }
 }
 
+@media (max-width: 780px) {
+  footer {
+    display: none;
+  }
+}
+
 .site-info {
   color: #fff;
 }

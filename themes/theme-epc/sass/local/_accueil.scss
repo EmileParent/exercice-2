@@ -116,6 +116,10 @@ footer {
         margin-top: 10%;
         width: 100%;
     }
+
+    @include phone {
+        display: none;
+    }
 }
 
 .site-info {
